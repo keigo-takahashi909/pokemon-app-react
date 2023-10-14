@@ -8,16 +8,16 @@ const Card = ({ pokemon }) => {
             <img src={pokemon.sprites.front_default} alt="" />
         </div>
         <h3 className="cardName">{pokemon.name}</h3>
-        <dvi className="cardTypes">
+        <div className="cardTypes">
             <div>タイプ</div>
             {pokemon.types.map((type) => {
                 return (
-                    <div>
+                    <div key={type.type.name}>
                         <span className="typeName">{type.type.name}</span>
                     </div>
                 );
             })}
-        </dvi>
+        </div>
         <div className="cardInfo">
             <div className="cardData">
                 <div className="cardData">
